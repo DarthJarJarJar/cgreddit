@@ -23,7 +23,8 @@
             {
                 data: {
                     full_name: username
-                }
+                },
+				redirectTo: "http://localhost:5173/createprofile"
             }
             );
             alert("Check your inbox for a verification email.")

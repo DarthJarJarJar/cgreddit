@@ -86,12 +86,7 @@
 	<p>Not a user? <a href="/signup" class="t font-extrabold text-blue-600">Sign Up</a></p>
 
 
-	<div class="flex flex-col w-full border-opacity-50">
-		<div class="divider">OR</div>
-	</div>
-	<button class="btn blurple mt-6" on:click={handleLoginWithDiscord}>
-		Continue with Discord
-	</button>
+	
 </div>
 
 <style>
