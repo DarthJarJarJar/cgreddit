@@ -25,6 +25,7 @@
           }
           if (error && status !== 406) throw error;
         });
+
       } catch (error) {
         alert(error.message);
       } finally {
@@ -102,8 +103,5 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
-	.blurple {
-		background-color: #5865f2;
-		color: white;
-	}
+	
 </style>

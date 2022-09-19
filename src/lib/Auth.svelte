@@ -1,6 +1,6 @@
 <script>
 	import { supabase } from '$lib/supabaseClient';
-	import { user } from '$lib/sessionStore';
+	import { username } from '$lib/sessionStore';
 
 	let loading = false;
 	let email;
@@ -44,8 +44,18 @@
 			alert(error.error_description || error.message);
 		} finally {
 			loading = false;
+			username.set(await getUsername(supabase.auth.user().id))
 		}
 	};
+
+	async function getUsername(id) {
+		const { data, error } = await supabase
+		.from("profiles")
+		.select("username")
+		.eq("id", id)
+
+		return data[0].username
+	}
 </script>
 
 <div class="container mt-10 grid place-items-center">
@@ -94,9 +104,5 @@
 		width: 80vw;
 		margin-left: auto;
 		margin-right: auto;
-	}
-	.blurple {
-		background-color: #5865f2;
-		color: white;
 	}
 </style>

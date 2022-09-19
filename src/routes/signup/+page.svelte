@@ -21,9 +21,9 @@
 				password: password
 			},
             {
-                data: {
-                    full_name: username
-                },
+                // data: {
+                //     full_name: username
+                // },
 				redirectTo: "http://localhost:5173/createprofile"
             }
             );
